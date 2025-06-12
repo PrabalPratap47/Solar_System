@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>3D Solar System</title>
+  <style>
+  * {
+    box-sizing: border-box;
+  }
+
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    font-family: sans-serif;
+    color: white;
+  }
+
+  #canvas-container {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  #toggleControls,
+  #toggleAnimation {
+    position: absolute;
+    top: 10px;
+    padding: 10px 15px;
+    background: #222;
+    color: white;
+    border: 1px solid #555;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  #toggleControls {
+    right: 10px;
+  }
+
+  #toggleAnimation {
+    right: 170px;
+  }
+
+  #controlsContainer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+    z-index: 1;
+    display: none;
+  }
+
+  .slider-wrapper {
+    margin: 5px 0;
+  }
+
+  .slider-wrapper label {
+    margin-right: 10px;
+  }
+</style>
+
+  </style>
+</head>
+<body>
+  <button id="toggleAnimation">Pause</button>
+  <button id="toggleControls">Toggle Speed Controls</button>
+  <div id="controlsContainer"></div>
+  <div id="canvas-container"></div>
+
+  <script src="https://unpkg.com/three@0.148.0/build/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
